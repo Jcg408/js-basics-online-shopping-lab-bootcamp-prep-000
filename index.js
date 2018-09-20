@@ -69,7 +69,7 @@ function removeFromCart(item) {
   
 function placeOrder(ccNum) {
 	if (arguments.length === 0) {
-		console.log("Sorry, we don't have a credit card on file for you.");
+  return "Sorry, we don't have a credit card on file for you.";
 		
 	} else if (ccNum>0 ) {
 		for (let i = 0; i < cart.length; i++) {
