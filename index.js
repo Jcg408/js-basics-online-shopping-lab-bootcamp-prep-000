@@ -77,7 +77,7 @@ function placeOrder(ccNum) {
 			num.push(cart[i].itemPrice);
 			cartTotal += num[i];
 			cart.length = 0;
-			console.log(`Your total cost is $${cartTotal}, which will be charged to the card ${ccNum}.`);
+		  return `Your total cost is $${cartTotal}, which will be charged to the card ${ccNum}.`;
 		}
 	}
 
