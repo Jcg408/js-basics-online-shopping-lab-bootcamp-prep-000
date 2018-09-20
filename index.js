@@ -66,6 +66,19 @@ function removeFromCart(item) {
 	}
 }
 
-function placeOrder(cardNumber) {
-  // write your code here
+  
+function placeOrder(ccNum) {
+	if (arguments.length === 0) {
+		console.log("Sorry, we don't have a credit card on file for you.");
+	} else if (ccNum>0 ) {
+		for (let i = 0; i < cart.length; i++) {
+			let num = [];
+			let cartTotal = 0;
+			num.push(cart[i].itemPrice);
+			cartTotal += num[i];
+			cart.length = 0;
+			console.log(`Your total cost is $${cartTotal}, which will be charged to the card ${ccNum}.`);
+		}
+	}
+
 }
